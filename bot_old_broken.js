@@ -176,6 +176,7 @@ function getPointsKeyboard() {
     }
 }
 
+
 function getSituationsKeyboard(selectedPoint = '') {
     console.log(`🎯 Создаем клавиатуру для точки: "${selectedPoint}"`);
     

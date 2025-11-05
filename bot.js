@@ -7,7 +7,10 @@ const SituationsManager = require('./modules/situationsManager');
 const StateManager = require('./modules/stateManager');
 const SolutionsManager = require('./modules/solutionsManager');
 
-const TOKEN = '8130982213:AAFroFmRqgNxvRZOdEbBB6b7VeNLOxmYFLY';
+const TOKEN = process.env.BOT_TOKEN;
+if (!TOKEN) {
+    throw new Error('BOT_TOKEN env var is not set');
+}
 const bot = new TelegramBot(TOKEN, { polling: true });
 
 // Обработка ошибок polling
